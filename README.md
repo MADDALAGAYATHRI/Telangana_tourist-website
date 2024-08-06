@@ -44,7 +44,4 @@ Our Website Features A Wide Range Of Information On The Top Attractions, Adventu
 <a href="https://ibb.co/CtFDMMP"><img src="https://i.ibb.co/8BVtddY/IMG-20240806-WA0006.jpg" alt="IMG-20240806-WA0006" border="0"></a>
 
 
-<br>
-<h4>Reserve Ticket</h4>
-<br>
-<a href="https://ibb.co/CtFDMMP"><img src="https://i.ibb.co/8BVtddY/IMG-20240806-WA0006.jpg" alt="IMG-20240806-WA0006" border="0" /></a>
+
