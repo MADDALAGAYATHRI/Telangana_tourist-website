@@ -22,25 +22,26 @@ Our Website Features A Wide Range Of Information On The Top Attractions, Adventu
 <br>
 <h4>Home Page</h4>
 <br>
-<a href="https://ibb.co/hdH0tP9">Home Page</a>
+
+<a href="https://ibb.co/02QD1WJ"><img src="https://i.ibb.co/vqDwfrz/IMG-20240806-WA0005.jpg" alt="IMG-20240806-WA0005" border="0"></a>Home Page</a>
 
 
 <br>
-<h4>Tourism Map of Telagana</h4>
+<h4>Locations</h4>
 <br>
-<a href="https://ibb.co/zSzWWFN">Tourism Map</a>
+<a href="https://ibb.co/23Y63XS"><img src="https://i.ibb.co/tpPhpyz/IMG-20240806-WA0003.jpg" alt="IMG-20240806-WA0003" border="0"></a>
 
 
 <br>
-<h4>Travel Blog</h4>
+<h4>Tourist's Reviews </h4>
 <br>
-<a href="https://ibb.co/23Y63XS">Travel Blog</a>
+<a href="https://ibb.co/hdH0tP9"><img src="https://i.ibb.co/M1pd3YS/IMG-20240806-WA0001.jpg" alt="IMG-20240806-WA0001" border="0"></a>
 
 
 <br>
-<h4>Traditional Events</h4>
+<h4>Reserve Ticket</h4>
 <br>
-<a href="https://ibb.co/7tW236L">Traditional Events</a>
+<a href="https://ibb.co/CtFDMMP"><img src="https://i.ibb.co/8BVtddY/IMG-20240806-WA0006.jpg" alt="IMG-20240806-WA0006" border="0"></a>
 
 
 <br>
