@@ -23,7 +23,7 @@ Our Website Features A Wide Range Of Information On The Top Attractions, Adventu
 <h4>Home Page</h4>
 <br>
 
-<a href="https://ibb.co/02QD1WJ"><img src="https://i.ibb.co/vqDwfrz/IMG-20240806-WA0005.jpg" alt="IMG-20240806-WA0005" border="0"></a>Home Page</a>
+<a href="https://ibb.co/02QD1WJ"><img src="https://i.ibb.co/vqDwfrz/IMG-20240806-WA0005.jpg" alt="IMG-20240806-WA0005" border="0"></a>
 
 
 <br>
