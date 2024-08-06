@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Charminar Details</title>
+
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="charminar_details.css">
+    <link rel="stylesheet" href="css/style.css"> <!-- Include your custom CSS file here -->
+
+    <!--from here content of previous -->
+    
+
+    <style>
+        /* Custom CSS for image dimensions */
+        .carousel-item img {
+            width: 100%;
+            height: 400px; /* Adjust height as needed */
+            object-fit: cover;
+        }
+        main {
+    padding-top: 80px; /* Adjust the padding to create space */
+    margin-top: 80px; /* Adjust the margin to create space */
+}
+
+    </style>
+</head>
+<body>
+
+<!-- Header -->
+<header class="header">
+    <div id="top"></div>
+    <!-- Your header content -->
+    <a href="index.html" class="logo"> <i class="fas fa-hiking"></i> Detour. </a>
+
+   
+    <nav class="navbar">
+        <div id="nav-close" class="fas fa-times"></div>
+        <a href="index.html">home</a>
+        <a href="adventure.html">location</a>
+        <a href="events.html">Events</a>      
+        <a href="about.html">about us</a>
+
+        
+    </nav>
+    <div class="icons">
+        <div id="menu-btn" class="fas fa-bars"></div>
+        <!--<div id="search-btn" class="fas fa-searchg"></div>-->
+        <div id="search-btn" ></div>
+    </div>
+
+   
+
+</header>
+
+<!-- Main Content -->
+<main class="container py-5">
+    <div class="row">
+        <!-- About Charminar section -->
+        <div class="col-md-6 mb-4">
+            <div class="about-charminar bg-white p-4 rounded shadow">
+                <h2>About</h2>
+                <p>Charminar is a historical monument located in Hyderabad, India. It was built in 1591 by Sultan Muhammad Quli Qutb Shah, the fifth ruler of the Qutb Shahi dynasty. The monument is known for its architectural beauty and historical significance.</p>
+                <p>Charminar is a square-shaped structure with four grand arches facing each cardinal direction. It has a height of approximately 56 meters and is adorned with intricate carvings and decorations.It has harminar is a square-shaped structure with four grand arches facing each cardinal direction.</p>
+            </div>
+        </div>
+        <!-- Right side - Image Gallery section -->
+        <div class="col-md-6">
+            <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="img/charminar1.jpg" class="d-block w-100" alt="Charminar 1">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="img/charminar2.jpg" class="d-block w-100" alt="Charminar 2">
+                    </div>
+                    <!-- Add more carousel items as needed -->
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Timings, Directions, and Tickets containers -->
+    <div class="row mt-5">
+        <div class="col-md-4 mb-4">
+            <div class="timings-container bg-white p-4 rounded shadow">
+                <h3>Timings</h3>
+                <p>Monday - Friday: 9:00 AM - 5:00 PM</p>
+                <p>Saturday - Sunday: 10:00 AM - 6:00 PM</p>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="timings-container bg-white p-4 rounded shadow">
+                <h3>Timings</h3>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15232.18037633239!2d78.474598!3d17.361563!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb978a6e1a939b%3A0xcb5a69e4aaf113fb!2sCharminar!5e0!3m2!1sen!2sin!4v1712646099485!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        
+                
+
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="tickets-container bg-white p-4 rounded shadow">
+                <h3>Tickets</h3>
+                <p>Total ₹ 20</p>
+                <a class="btn btn-primary" href="reserve_ticket.html">Reserve Ticket</a>
+            </div>
+        </div>
+    </div>
+</main>
+
+<!-- Footer -->
+<footer class="footer">
+    <!-- Your footer content -->
+</footer>
+
+<!-- Bootstrap Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Custom JS -->
+<script src="js/allscript.js"></script>
+
+<!-- Google Maps API (Include your own API key here) -->
+<script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>
+
+</body>
+</html>

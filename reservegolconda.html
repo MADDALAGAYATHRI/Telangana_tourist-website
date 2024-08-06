@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reserve Ticket</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 20px;
+        }
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="number"],
+        input[type="date"],
+        input[type="time"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>Reserve Ticket</h1>
+    <form action="golconda.php" method="post" onsubmit="return validateForm()">
+
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br>
+
+        <label for="email">Email:(Please enter your Login email ID)</label>
+        <input type="email" id="email" name="email" required><br>
+    
+        <label for="tickets">Number of Tickets:</label>
+        <input type="number" id="tickets" name="tickets" required><br>
+    
+        <label for="date">Date:</label>
+        <input type="date" id="date" name="date" required><br>
+    
+        <label for="time">Time:</label>
+        <input type="time" id="time" name="time" required><br>
+
+        <!-- New Ticket Details -->
+        <h2>Tickets</h2>
+        <label for="adult_tickets">Adults ₹25:</label>
+        <input type="number" id="adult_tickets" name="adult_tickets" value="0"><br>
+
+        <label for="children_tickets">Children (Below 15) Free:</label>
+        <input type="number" id="children_tickets" name="children_tickets" value="0"><br>
+
+        <button type="submit">Submit</button>
+    </form>
+    <script>
+        function validateForm() {
+            // Validate email format
+            var email = document.getElementById("email").value;
+            var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                alert("Please enter a valid email address.");
+                return false;
+            }
+
+            // Validate time between 9 AM and 5 PM
+            var selectedTime = document.getElementById("time").value;
+            var timeParts = selectedTime.split(":");
+            var hours = parseInt(timeParts[0]);
+            var minutes = parseInt(timeParts[1]);
+
+            if (hours < 9 || (hours == 17 && minutes > 0) || hours > 17) {
+                alert("Please select a time between 9 AM and 5 PM.");
+                return false;
+            }
+
+            // Validate adult and children tickets
+            var totalTickets = parseInt(document.getElementById("tickets").value);
+            var adultTickets = parseInt(document.getElementById("adult_tickets").value);
+            var childrenTickets = parseInt(document.getElementById("children_tickets").value);
+
+            if (adultTickets + childrenTickets !== totalTickets) {
+                alert("Total adult and children tickets should equal the number of tickets.");
+                return false;
+            }
+
+            // Validate the date
+            var inputDate = new Date(document.getElementById("date").value);
+            var currentDate = new Date();
+            inputDate.setHours(0, 0, 0, 0);
+            currentDate.setHours(0, 0, 0, 0);
+            if (inputDate < currentDate) {
+                alert("Please select the correct date.");
+                return false;
+            }
+
+            return true;
+        }
+    </script>
+</body>
+</html>

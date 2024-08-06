@@ -1,0 +1,199 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box; /* Fixed typo in 'box-sizing' property */
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    list-style: none;
+    scroll-behavior: smooth;
+}
+
+.banner {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative; /* Added position relative for children positioning */
+}
+
+.banner video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; /* Added width and height to cover the entire banner */
+    height: 100%;
+    object-fit: cover;
+}
+.content {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(1, 0, 5, 0.3), rgba(4, 0, 5, 0.3)); /* Fixed the linear-gradient values */
+}
+
+nav {
+    width: 100%;
+    position: fixed;
+    top: 0; /* Added to fix the navigation bar at the top */
+    background-color: rgb(21, 74, 74);
+    box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.15); /* Fixed the rgba value */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+nav .logo {
+    width: 60px;
+    margin: 2vh;
+    margin-left: 8%;
+}
+
+nav ul li {
+    list-style: none;
+    display: inline-block;
+    margin-left: 40px;
+}
+.navbar {
+    display: flex;
+    margin-right: 4vh;
+}
+
+.navbar a {
+    color: white;
+    font-size: 18px;
+    padding: 10px 22px;
+    border-radius: 4px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: ease 0.4s; /* Fixed the transition duration */
+}
+
+.navbar a:hover,
+.navbar a.active { /* Added comma separator */
+    background: white;
+    color: black;
+    box-shadow: 5px 10px 30px rgba(85, 85, 85, 0.2); /* Fixed rgba value */
+    border-radius: 5px;
+}
+nav ul li a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: 17px;
+}
+
+.title {
+    text-decoration: none;
+    font-size: 4vh;
+    color: rgb(255, 255, 255);
+    padding: 14px 17px;
+    margin-top: 32vh;
+    text-align: center;
+    vertical-align: center; /* This property is not supported for non-inline or inline-block elements */
+}
+button {
+    display: inline-block;
+    margin-top: 5vh;
+    font-size: 25px;
+    padding: 10px 30px;
+    color: rgb(21, 74, 74);
+    background-color: white;
+    border-radius: 20px;
+    text-decoration: none;
+    transition: ease 0.3s; /* Fixed transition duration */
+}
+
+.button:hover {
+    transform: scale(1.1);
+    color: white;
+    background-color: rgb(21, 74, 74);
+    box-shadow: 5px 10px 30px rgba(0, 0, 0, 0.4);
+    padding: 10px 30px; /* This property is unchanged, just formatting */
+}
+/* Packages */
+
+.package-title { /* Corrected the class selector */
+    text-align: center;
+}
+
+.package-title h2 { /* Corrected the class selector */
+    font-size: 40px;
+    font-weight: 650;
+    padding-top: 75px;
+    padding-bottom: 10px;
+    line-height: 2;
+}
+
+.package-content { /* Added missing curly braces */
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.image {
+    position: relative;
+    transition: all 0.3s cubic-bezier(0.445, 0.05, 0.55, 0.95); /* Removed space before the parenthesis */
+    cursor: pointer;
+    filter: brightness(95%); /* Removed space before the parenthesis */
+}
+
+.image img {
+    width: 100%;
+    height: 500px;
+    border-radius: 30px;
+}
+
+.image h3 {
+    color: white;
+    position: absolute;
+    font-size: 30px;
+}
+.dest-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 15px;
+    margin-bottom: 50px;
+}
+
+.dest-content .location h4 { /* Corrected the selector */
+    font-size: 25px;
+    letter-spacing: 1px;
+    font-weight: 600;
+    margin-bottom: 2px;
+}
+
+.dest-content .pac-details li { /* Corrected the selector */
+    font-size: 19px;
+    color: #4c4c4c;
+    margin-left: 15px;
+    margin-bottom: 2px;
+    list-style-type: disc;
+}
+.dest-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 15px;
+    margin-bottom: 50px;
+}
+.image:hover {
+    filter: brightness(120%);
+    transform: scale(1.03);
+}
+
+/* Locations */
+
+.location-content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.location-heading {
+    font-family: 'Dancing Script', cursive;
+}
+
+

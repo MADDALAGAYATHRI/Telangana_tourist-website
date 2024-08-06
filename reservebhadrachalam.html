@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reserve Ticket</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 20px;
+        }
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="number"],
+        input[type="date"],
+        input[type="time"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>Reserve Ticket</h1>
+    <form action="badrachalam.php" method="post" onsubmit="return validateForm()">
+
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br>
+
+        <label for="email">Email:(Please enter your Login email ID)</label>
+        <input type="email" id="email" name="email" required><br>
+    
+        <label for="tickets">Number of Tickets:</label>
+        <input type="number" id="tickets" name="tickets" value="0" min="0" required><br>
+    
+        <label for="date">Date:</label>
+        <input type="date" id="date" name="date" required><br>
+    
+        <label for="time">Time:</label>
+        <input type="time" id="time" name="time" required><br>
+
+        <label for="free_tickets">Free Darshan:</label>
+        <input type="number" id="free_tickets" name="free_tickets" value="0" min="0"><br>
+
+        <label for="general_darshan">General Darshan ₹50:</label>
+        <input type="number" id="general_darshan" name="general_darshan" value="0" min="0"><br>
+
+        <label for="vip_darshan">VIP Darshan  ₹250:</label>
+        <input type="number" id="vip_darshan" name="vip_darshan" value="0" min="0"><br>
+    
+        <button type="submit">Submit</button>
+    </form>
+    <script>
+        function validateForm() {
+            // Validate email format
+            var email = document.getElementById("email").value;
+            var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                alert("Please enter a valid email address.");
+                return false;
+            }
+
+            // Validate time selection
+            var selectedTime = document.getElementById("time").value;
+            var selectedHour = parseInt(selectedTime.split(':')[0]);
+            var selectedMinute = parseInt(selectedTime.split(':')[1]);
+            var ampm = selectedHour >= 12 ? 'PM' : 'AM';
+
+            if (selectedHour < 4 || (selectedHour === 12 && ampm === 'AM') || (selectedHour >= 21 && selectedMinute !== 0) || (selectedHour === 13 && selectedMinute < 30)) {
+                alert("Please select a time between 4:30 AM - 9:00 PM.");
+                return false;
+            }
+
+            // Validate ticket distribution
+            var totalTickets = parseInt(document.getElementById("tickets").value);
+            var freeTickets = parseInt(document.getElementById("free_tickets").value);
+            var generalDarshanTickets = parseInt(document.getElementById("general_darshan").value);
+            var vipDarshanTickets = parseInt(document.getElementById("vip_darshan").value);
+
+            if (freeTickets + generalDarshanTickets + vipDarshanTickets !== totalTickets) {
+                alert("Total number of tickets should match the sum of Free Darshan, General Darshan, and VIP Darshan tickets.");
+                return false;
+            }
+
+            // Validate the date
+            var inputDate = new Date(document.getElementById("date").value);
+            var currentDate = new Date();
+            inputDate.setHours(0, 0, 0, 0);
+            currentDate.setHours(0, 0, 0, 0);
+            if (inputDate < currentDate) {
+                alert("Please select a future date.");
+                return false;
+            }
+
+            return true;
+        }
+    </script>
+</body>
+</html>
