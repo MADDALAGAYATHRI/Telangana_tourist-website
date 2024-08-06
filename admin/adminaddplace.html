@@ -1,0 +1,22 @@
+<!-- Admin Page -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Add necessary meta tags, CSS links, and scripts -->
+</head>
+<body>
+    <h1>Add New Place</h1>
+    <form action="adminaddplace.php" method="post" enctype="multipart/form-data">
+        <label for="place_name">Place Name:</label>
+        <input type="text" id="place_name" name="place_name" required><br><br>
+        
+        <label for="place_image">Place Image:</label>
+        <input type="file" id="place_image" name="place_image" required><br><br>
+        
+        <label for="place_description">Place Description:</label><br>
+        <textarea id="place_description" name="place_description" rows="4" cols="50" required></textarea><br><br>
+        
+        <input type="submit" value="Add Place">
+    </form>
+</body>
+</html>
